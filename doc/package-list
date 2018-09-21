@@ -1,0 +1,7 @@
+net.bmwgroup.rac.configuration
+net.bmwgroup.rac.controller
+net.bmwgroup.rac.model
+net.bmwgroup.rac.repository
+net.bmwgroup.rac.service
+net.bmwgroup.rac.test
+net.bmwgroup.rac.test.configuration

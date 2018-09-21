@@ -1,0 +1,144 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.bmwgroup</groupId>
+	<artifactId>RAC_Proj</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0</version>
+	<name>Request Account</name>
+	
+	<!--  Version definitions -->
+	<properties>
+        <springframework.version>5.0.8.RELEASE</springframework.version>
+        <jackson.library>2.9.6</jackson.library>
+        <springDataJPA.version>2.0.9.RELEASE</springDataJPA.version>
+        <hibernate.version>5.3.5.Final</hibernate.version>
+        <javax.servletAPI.version>4.0.1</javax.servletAPI.version>
+        <h2database.version>1.4.197</h2database.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+	<dependencies>
+	
+	 	<dependency> 
+	 		<groupId>javax.interceptor</groupId> 
+	 		<artifactId>javax.interceptor-api</artifactId> 
+	 		<version>1.2</version> 
+	 	</dependency>
+	
+		<!-- Spring dependencies -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+    		<version>${springframework.version}</version>
+    		<scope>test</scope>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        
+        <!-- Database dependencies -->
+        <dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-tx</artifactId>
+   		 	<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.springframework.data</groupId>
+    		<artifactId>spring-data-jpa</artifactId>
+    		<version>${springDataJPA.version}</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+   			<artifactId>hibernate-entitymanager</artifactId>
+    		<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.h2database</groupId>
+    		<artifactId>h2</artifactId>
+    		<version>${h2database.version}</version>
+    		<scope>test</scope>
+		</dependency>
+		<dependency>
+    		<groupId>mysql</groupId>
+    		<artifactId>mysql-connector-java</artifactId>
+    		<version>8.0.12</version>
+		</dependency>
+ 
+ 		<!-- Servlet API -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servletAPI.version}</version>
+        </dependency>
+        
+        <!-- JUnit -->
+        <dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>${junit.version}</version>
+    		<scope>test</scope>
+		</dependency>
+        
+        
+        <!-- JSON/XML databind  -->
+        <dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+    		<artifactId>jackson-databind</artifactId>
+    		<version>${jackson.library}</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+    		<artifactId>jackson-annotations</artifactId>
+    		<version>${jackson.library}</version>
+		</dependency>
+		<dependency>
+   			<groupId>com.fasterxml.jackson.core</groupId>
+  			<artifactId>jackson-core</artifactId>
+    		<version>${jackson.library}</version>
+		</dependency>	
+	</dependencies>
+
+	<!-- Build/Compile properties -->
+	<build>
+		<pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>RequestAccount</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+		<finalName>RequestAccount</finalName>
+	</build>
+
+</project>
