@@ -1,7 +1,7 @@
-net.bmwgroup.rac.configuration
-net.bmwgroup.rac.controller
-net.bmwgroup.rac.model
-net.bmwgroup.rac.repository
-net.bmwgroup.rac.service
-net.bmwgroup.rac.test
-net.bmwgroup.rac.test.configuration
+net.springjpa.mvc.rac.configuration
+net.springjpa.mvc.rac.controller
+net.springjpa.mvc.rac.model
+net.springjpa.mvc.rac.repository
+net.springjpa.mvc.rac.service
+net.springjpa.mvc.rac.test
+net.springjpa.mvc.rac.test.configuration
